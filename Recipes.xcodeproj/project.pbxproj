@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		DB06942B2A48FF9C00ECA604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06942A2A48FF9C00ECA604 /* AppDelegate.swift */; };
 		DB06942D2A48FF9C00ECA604 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06942C2A48FF9C00ECA604 /* SceneDelegate.swift */; };
-		DB06942F2A48FF9C00ECA604 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06942E2A48FF9C00ECA604 /* ViewController.swift */; };
-		DB0694322A48FF9C00ECA604 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0694302A48FF9C00ECA604 /* Main.storyboard */; };
 		DB0694342A48FF9D00ECA604 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB0694332A48FF9D00ECA604 /* Assets.xcassets */; };
 		DB0694372A48FF9D00ECA604 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0694352A48FF9D00ECA604 /* LaunchScreen.storyboard */; };
 		DB0694422A48FF9D00ECA604 /* RecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0694412A48FF9D00ECA604 /* RecipesTests.swift */; };
 		DB06944C2A48FF9D00ECA604 /* RecipesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06944B2A48FF9D00ECA604 /* RecipesUITests.swift */; };
 		DB06944E2A48FF9D00ECA604 /* RecipesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06944D2A48FF9D00ECA604 /* RecipesUITestsLaunchTests.swift */; };
+		DB0694642A49022400ECA604 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0694622A49022400ECA604 /* LoginViewController.swift */; };
+		DB0694652A49022400ECA604 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0694632A49022400ECA604 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,6 @@
 		DB0694272A48FF9C00ECA604 /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB06942A2A48FF9C00ECA604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB06942C2A48FF9C00ECA604 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DB06942E2A48FF9C00ECA604 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DB0694312A48FF9C00ECA604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB0694332A48FF9D00ECA604 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB0694362A48FF9D00ECA604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB0694382A48FF9D00ECA604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +47,8 @@
 		DB0694472A48FF9D00ECA604 /* RecipesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB06944B2A48FF9D00ECA604 /* RecipesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesUITests.swift; sourceTree = "<group>"; };
 		DB06944D2A48FF9D00ECA604 /* RecipesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DB0694622A49022400ECA604 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DB0694632A49022400ECA604 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +99,9 @@
 		DB0694292A48FF9C00ECA604 /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
-				DB06942A2A48FF9C00ECA604 /* AppDelegate.swift */,
-				DB06942C2A48FF9C00ECA604 /* SceneDelegate.swift */,
-				DB06942E2A48FF9C00ECA604 /* ViewController.swift */,
-				DB0694302A48FF9C00ECA604 /* Main.storyboard */,
-				DB0694332A48FF9D00ECA604 /* Assets.xcassets */,
-				DB0694352A48FF9D00ECA604 /* LaunchScreen.storyboard */,
+				DB06945A2A4901CD00ECA604 /* Core */,
+				DB06945C2A4901F100ECA604 /* Scenes */,
+				DB06945B2A4901DA00ECA604 /* SupportFiles */,
 				DB0694382A48FF9D00ECA604 /* Info.plist */,
 			);
 			path = Recipes;
@@ -125,6 +122,73 @@
 				DB06944D2A48FF9D00ECA604 /* RecipesUITestsLaunchTests.swift */,
 			);
 			path = RecipesUITests;
+			sourceTree = "<group>";
+		};
+		DB06945A2A4901CD00ECA604 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DB06942A2A48FF9C00ECA604 /* AppDelegate.swift */,
+				DB06942C2A48FF9C00ECA604 /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DB06945B2A4901DA00ECA604 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				DB0694332A48FF9D00ECA604 /* Assets.xcassets */,
+				DB0694352A48FF9D00ECA604 /* LaunchScreen.storyboard */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		DB06945C2A4901F100ECA604 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				DB06945D2A4901FA00ECA604 /* LoginScreen */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		DB06945D2A4901FA00ECA604 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DB0694602A49020A00ECA604 /* Model */,
+				DB06945F2A49020600ECA604 /* View */,
+				DB06945E2A49020100ECA604 /* ViewModel */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		DB06945E2A49020100ECA604 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DB06945F2A49020600ECA604 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB0694602A49020A00ECA604 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB0694612A49021300ECA604 /* Controller */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB0694612A49021300ECA604 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DB0694622A49022400ECA604 /* LoginViewController.swift */,
+				DB0694632A49022400ECA604 /* LoginViewController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +297,7 @@
 			files = (
 				DB0694372A48FF9D00ECA604 /* LaunchScreen.storyboard in Resources */,
 				DB0694342A48FF9D00ECA604 /* Assets.xcassets in Resources */,
-				DB0694322A48FF9C00ECA604 /* Main.storyboard in Resources */,
+				DB0694652A49022400ECA604 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB06942F2A48FF9C00ECA604 /* ViewController.swift in Sources */,
+				DB0694642A49022400ECA604 /* LoginViewController.swift in Sources */,
 				DB06942B2A48FF9C00ECA604 /* AppDelegate.swift in Sources */,
 				DB06942D2A48FF9C00ECA604 /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +361,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DB0694302A48FF9C00ECA604 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB0694312A48FF9C00ECA604 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DB0694352A48FF9D00ECA604 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,7 +422,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +476,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -442,9 +498,8 @@
 				INFOPLIST_FILE = Recipes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,9 +525,8 @@
 				INFOPLIST_FILE = Recipes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
