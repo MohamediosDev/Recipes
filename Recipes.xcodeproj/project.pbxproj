@@ -170,6 +170,7 @@
 		DB06945F2A49020600ECA604 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DB0694612A49021300ECA604 /* Controller */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,7 +178,6 @@
 		DB0694602A49020A00ECA604 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DB0694612A49021300ECA604 /* Controller */,
 			);
 			path = Model;
 			sourceTree = "<group>";
