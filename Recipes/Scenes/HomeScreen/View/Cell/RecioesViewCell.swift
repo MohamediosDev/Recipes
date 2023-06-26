@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Kingfisher
+import Cosmos
 
 class RecioesViewCell: UITableViewCell {
     
@@ -14,11 +16,21 @@ class RecioesViewCell: UITableViewCell {
     @IBOutlet weak var recipesName: UILabel!
     @IBOutlet weak var recipesCarp: UILabel!
     
+    @IBOutlet weak var rateView: CosmosView!
     static let cellID = "RecioesViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func configureCell(model: RecipesModelElement) {
+        let url = URL(string: model.image)
+        recipesImage.kf.indicatorType = .activity
+        recipesImage.kf.setImage(with: url)
+        recipesName.text = model.name
+        recipesCarp.text = model.carbos
+        rateView.rating = model.rating ?? 0.0
     }
     
 }

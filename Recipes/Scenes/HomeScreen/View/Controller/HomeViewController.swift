@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseWireFrame<HomeViewModelProtocol> {
 
     //MARK: -> Outlet
     @IBOutlet weak var recipesTableView: UITableView!
@@ -15,16 +15,28 @@ class HomeViewController: UIViewController {
     //MARK: -> Properties
     private let searchController = UISearchController()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         setupUI()
+        viewModel.viewModelDidload()
+        bindRecipesData()
     }
     
     private func setupUI() {
         title = "Recipes"
         navigationItem.searchController = searchController
     }
+    
+    
+    private func bindRecipesData() {
+        viewModel.output.recipes.receive(on: DispatchQueue.main).sink { [weak self] value in
+            guard let self = self else {return}
+            recipesTableView.reloadData()
+        }.store(in: &cancellable)
+    }
+    
 
 
   
@@ -40,12 +52,12 @@ extension HomeViewController: UITableViewDelegate , UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.output.recipes.value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = recipesTableView.dequeueReusableCell(withIdentifier: RecioesViewCell.cellID, for: indexPath) as! RecioesViewCell
-        
+        cell.configureCell(model: viewModel.output.recipes.value[indexPath.row])
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

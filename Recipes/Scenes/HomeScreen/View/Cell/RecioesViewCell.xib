@@ -55,6 +55,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="rateView" destination="3qm-HN-K9U" id="jdf-Bu-9tb"/>
                 <outlet property="recipesCarp" destination="ify-fv-QMe" id="Q9S-sc-SZ2"/>
                 <outlet property="recipesImage" destination="HdQ-vc-Gc1" id="Rpo-nm-gbC"/>
                 <outlet property="recipesName" destination="R8q-GI-Jcx" id="GM4-f6-ROI"/>

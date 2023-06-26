@@ -25,6 +25,12 @@
 		DB06947D2A491CBA00ECA604 /* RecioesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06947B2A491CBA00ECA604 /* RecioesViewCell.swift */; };
 		DB06947E2A491CBA00ECA604 /* RecioesViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB06947C2A491CBA00ECA604 /* RecioesViewCell.xib */; };
 		DB0694812A49B12600ECA604 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = DB0694802A49B12600ECA604 /* Cosmos */; };
+		DB0694832A49BA3700ECA604 /* RecipesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0694822A49BA3700ECA604 /* RecipesModel.swift */; };
+		DB0694852A49BB1200ECA604 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0694842A49BB1200ECA604 /* HomeViewModel.swift */; };
+		DB0694882A49BE4300ECA604 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DB0694872A49BE4300ECA604 /* Kingfisher */; };
+		DB06948B2A49C14400ECA604 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06948A2A49C14400ECA604 /* NetworkHandler.swift */; };
+		DB06948E2A49C1C600ECA604 /* HomeRepositery.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06948D2A49C1C600ECA604 /* HomeRepositery.swift */; };
+		DB0694902A49C85A00ECA604 /* BaseWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06948F2A49C85A00ECA604 /* BaseWireFrame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +71,11 @@
 		DB0694782A491A8E00ECA604 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		DB06947B2A491CBA00ECA604 /* RecioesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecioesViewCell.swift; sourceTree = "<group>"; };
 		DB06947C2A491CBA00ECA604 /* RecioesViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecioesViewCell.xib; sourceTree = "<group>"; };
+		DB0694822A49BA3700ECA604 /* RecipesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesModel.swift; sourceTree = "<group>"; };
+		DB0694842A49BB1200ECA604 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DB06948A2A49C14400ECA604 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
+		DB06948D2A49C1C600ECA604 /* HomeRepositery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepositery.swift; sourceTree = "<group>"; };
+		DB06948F2A49C85A00ECA604 /* BaseWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireFrame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0694882A49BE4300ECA604 /* Kingfisher in Frameworks */,
 				DB0694812A49B12600ECA604 /* Cosmos in Frameworks */,
 				DB06946A2A49176500ECA604 /* Toast in Frameworks */,
 			);
@@ -120,6 +132,7 @@
 				DB06945A2A4901CD00ECA604 /* Core */,
 				DB06945C2A4901F100ECA604 /* Scenes */,
 				DB06946B2A49176D00ECA604 /* Helpers */,
+				DB0694892A49C0BE00ECA604 /* NetworkLayer */,
 				DB06945B2A4901DA00ECA604 /* SupportFiles */,
 				DB0694382A48FF9D00ECA604 /* Info.plist */,
 			);
@@ -209,6 +222,7 @@
 			children = (
 				DB06946C2A49177E00ECA604 /* ToastManager.swift */,
 				DB0694782A491A8E00ECA604 /* ProgressHUD.swift */,
+				DB06948F2A49C85A00ECA604 /* BaseWireFrame.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -226,6 +240,7 @@
 		DB06946F2A49192B00ECA604 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DB0694842A49BB1200ECA604 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -242,6 +257,7 @@
 		DB0694712A49193400ECA604 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DB0694822A49BA3700ECA604 /* RecipesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,6 +280,23 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		DB0694892A49C0BE00ECA604 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				DB06948C2A49C1B500ECA604 /* Repositery */,
+				DB06948A2A49C14400ECA604 /* NetworkHandler.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		DB06948C2A49C1B500ECA604 /* Repositery */ = {
+			isa = PBXGroup;
+			children = (
+				DB06948D2A49C1C600ECA604 /* HomeRepositery.swift */,
+			);
+			path = Repositery;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -283,6 +316,7 @@
 			packageProductDependencies = (
 				DB0694692A49176500ECA604 /* Toast */,
 				DB0694802A49B12600ECA604 /* Cosmos */,
+				DB0694872A49BE4300ECA604 /* Kingfisher */,
 			);
 			productName = Recipes;
 			productReference = DB0694272A48FF9C00ECA604 /* Recipes.app */;
@@ -359,6 +393,7 @@
 			packageReferences = (
 				DB0694682A49176400ECA604 /* XCRemoteSwiftPackageReference "toast-swift" */,
 				DB06947F2A49B12600ECA604 /* XCRemoteSwiftPackageReference "Cosmos" */,
+				DB0694862A49BE4300ECA604 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = DB0694282A48FF9C00ECA604 /* Products */;
 			projectDirPath = "";
@@ -406,7 +441,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB06946D2A49177E00ECA604 /* ToastManager.swift in Sources */,
+				DB06948B2A49C14400ECA604 /* NetworkHandler.swift in Sources */,
+				DB06948E2A49C1C600ECA604 /* HomeRepositery.swift in Sources */,
+				DB0694832A49BA3700ECA604 /* RecipesModel.swift in Sources */,
+				DB0694902A49C85A00ECA604 /* BaseWireFrame.swift in Sources */,
 				DB0694672A49094600ECA604 /* LoginViewModel.swift in Sources */,
+				DB0694852A49BB1200ECA604 /* HomeViewModel.swift in Sources */,
 				DB0694642A49022400ECA604 /* LoginViewController.swift in Sources */,
 				DB0694792A491A8E00ECA604 /* ProgressHUD.swift in Sources */,
 				DB06942B2A48FF9C00ECA604 /* AppDelegate.swift in Sources */,
@@ -762,6 +802,14 @@
 				minimumVersion = 23.0.0;
 			};
 		};
+		DB0694862A49BE4300ECA604 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -774,6 +822,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DB06947F2A49B12600ECA604 /* XCRemoteSwiftPackageReference "Cosmos" */;
 			productName = Cosmos;
+		};
+		DB0694872A49BE4300ECA604 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB0694862A49BE4300ECA604 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
