@@ -19,6 +19,12 @@
 		DB0694672A49094600ECA604 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0694662A49094600ECA604 /* LoginViewModel.swift */; };
 		DB06946A2A49176500ECA604 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = DB0694692A49176500ECA604 /* Toast */; };
 		DB06946D2A49177E00ECA604 /* ToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06946C2A49177E00ECA604 /* ToastManager.swift */; };
+		DB0694762A4919B300ECA604 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0694742A4919B300ECA604 /* HomeViewController.swift */; };
+		DB0694772A4919B300ECA604 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0694752A4919B300ECA604 /* HomeViewController.xib */; };
+		DB0694792A491A8E00ECA604 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0694782A491A8E00ECA604 /* ProgressHUD.swift */; };
+		DB06947D2A491CBA00ECA604 /* RecioesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06947B2A491CBA00ECA604 /* RecioesViewCell.swift */; };
+		DB06947E2A491CBA00ECA604 /* RecioesViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB06947C2A491CBA00ECA604 /* RecioesViewCell.xib */; };
+		DB0694812A49B12600ECA604 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = DB0694802A49B12600ECA604 /* Cosmos */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +60,11 @@
 		DB0694632A49022400ECA604 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		DB0694662A49094600ECA604 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		DB06946C2A49177E00ECA604 /* ToastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastManager.swift; sourceTree = "<group>"; };
+		DB0694742A4919B300ECA604 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DB0694752A4919B300ECA604 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		DB0694782A491A8E00ECA604 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		DB06947B2A491CBA00ECA604 /* RecioesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecioesViewCell.swift; sourceTree = "<group>"; };
+		DB06947C2A491CBA00ECA604 /* RecioesViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecioesViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0694812A49B12600ECA604 /* Cosmos in Frameworks */,
 				DB06946A2A49176500ECA604 /* Toast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +164,7 @@
 		DB06945C2A4901F100ECA604 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DB06946E2A49192300ECA604 /* HomeScreen */,
 				DB06945D2A4901FA00ECA604 /* LoginScreen */,
 			);
 			path = Scenes;
@@ -195,8 +208,60 @@
 			isa = PBXGroup;
 			children = (
 				DB06946C2A49177E00ECA604 /* ToastManager.swift */,
+				DB0694782A491A8E00ECA604 /* ProgressHUD.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DB06946E2A49192300ECA604 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DB0694712A49193400ECA604 /* Model */,
+				DB0694702A49193100ECA604 /* View */,
+				DB06946F2A49192B00ECA604 /* ViewModel */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		DB06946F2A49192B00ECA604 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DB0694702A49193100ECA604 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB0694732A4919A500ECA604 /* Cell */,
+				DB0694722A49199E00ECA604 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB0694712A49193400ECA604 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB0694722A49199E00ECA604 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DB0694742A4919B300ECA604 /* HomeViewController.swift */,
+				DB0694752A4919B300ECA604 /* HomeViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DB0694732A4919A500ECA604 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DB06947B2A491CBA00ECA604 /* RecioesViewCell.swift */,
+				DB06947C2A491CBA00ECA604 /* RecioesViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +282,7 @@
 			name = Recipes;
 			packageProductDependencies = (
 				DB0694692A49176500ECA604 /* Toast */,
+				DB0694802A49B12600ECA604 /* Cosmos */,
 			);
 			productName = Recipes;
 			productReference = DB0694272A48FF9C00ECA604 /* Recipes.app */;
@@ -292,6 +358,7 @@
 			mainGroup = DB06941E2A48FF9C00ECA604;
 			packageReferences = (
 				DB0694682A49176400ECA604 /* XCRemoteSwiftPackageReference "toast-swift" */,
+				DB06947F2A49B12600ECA604 /* XCRemoteSwiftPackageReference "Cosmos" */,
 			);
 			productRefGroup = DB0694282A48FF9C00ECA604 /* Products */;
 			projectDirPath = "";
@@ -309,9 +376,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB06947E2A491CBA00ECA604 /* RecioesViewCell.xib in Resources */,
 				DB0694372A48FF9D00ECA604 /* LaunchScreen.storyboard in Resources */,
 				DB0694342A48FF9D00ECA604 /* Assets.xcassets in Resources */,
 				DB0694652A49022400ECA604 /* LoginViewController.xib in Resources */,
+				DB0694772A4919B300ECA604 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,8 +408,11 @@
 				DB06946D2A49177E00ECA604 /* ToastManager.swift in Sources */,
 				DB0694672A49094600ECA604 /* LoginViewModel.swift in Sources */,
 				DB0694642A49022400ECA604 /* LoginViewController.swift in Sources */,
+				DB0694792A491A8E00ECA604 /* ProgressHUD.swift in Sources */,
 				DB06942B2A48FF9C00ECA604 /* AppDelegate.swift in Sources */,
+				DB06947D2A491CBA00ECA604 /* RecioesViewCell.swift in Sources */,
 				DB06942D2A48FF9C00ECA604 /* SceneDelegate.swift in Sources */,
+				DB0694762A4919B300ECA604 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +754,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		DB06947F2A49B12600ECA604 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 23.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -689,6 +769,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DB0694682A49176400ECA604 /* XCRemoteSwiftPackageReference "toast-swift" */;
 			productName = Toast;
+		};
+		DB0694802A49B12600ECA604 /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB06947F2A49B12600ECA604 /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
