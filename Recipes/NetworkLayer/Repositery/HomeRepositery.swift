@@ -19,8 +19,7 @@ class HomeRepositery: HomeRepsiteryProtocol {
     }
     
     func getRecipes(complation: @escaping ([RecipesModelElement]) -> Void) {
-        network.fetch(url: "https://api.npoint.io/43427003d33f1f6b51cc", modelType: [RecipesModelElement].self) { [weak self] result in
-            guard let self = self else {return}
+        network.fetch(url: "https://api.npoint.io/43427003d33f1f6b51cc", modelType: [RecipesModelElement].self) { result in
             switch result {
             case .success(let success):
                 complation(success)

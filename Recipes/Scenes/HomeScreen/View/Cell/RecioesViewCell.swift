@@ -31,6 +31,7 @@ class RecioesViewCell: UITableViewCell {
         recipesName.text = model.name
         recipesCarp.text = "Carb: \(model.carbos)"
         rateView.rating = model.rating ?? 0.0
+        rateView.isUserInteractionEnabled = false
     }
     
 }
