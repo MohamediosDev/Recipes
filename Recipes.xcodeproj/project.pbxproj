@@ -16,6 +16,7 @@
 		DB06944E2A48FF9D00ECA604 /* RecipesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06944D2A48FF9D00ECA604 /* RecipesUITestsLaunchTests.swift */; };
 		DB0694642A49022400ECA604 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0694622A49022400ECA604 /* LoginViewController.swift */; };
 		DB0694652A49022400ECA604 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0694632A49022400ECA604 /* LoginViewController.xib */; };
+		DB0694672A49094600ECA604 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0694662A49094600ECA604 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DB06944D2A48FF9D00ECA604 /* RecipesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DB0694622A49022400ECA604 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DB0694632A49022400ECA604 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		DB0694662A49094600ECA604 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +155,6 @@
 		DB06945D2A4901FA00ECA604 /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
-				DB0694602A49020A00ECA604 /* Model */,
 				DB06945F2A49020600ECA604 /* View */,
 				DB06945E2A49020100ECA604 /* ViewModel */,
 			);
@@ -163,6 +164,7 @@
 		DB06945E2A49020100ECA604 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DB0694662A49094600ECA604 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -173,13 +175,6 @@
 				DB0694612A49021300ECA604 /* Controller */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		DB0694602A49020A00ECA604 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		DB0694612A49021300ECA604 /* Controller */ = {
@@ -322,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0694672A49094600ECA604 /* LoginViewModel.swift in Sources */,
 				DB0694642A49022400ECA604 /* LoginViewController.swift in Sources */,
 				DB06942B2A48FF9C00ECA604 /* AppDelegate.swift in Sources */,
 				DB06942D2A48FF9C00ECA604 /* SceneDelegate.swift in Sources */,
