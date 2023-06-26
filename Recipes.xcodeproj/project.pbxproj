@@ -17,6 +17,8 @@
 		DB0694642A49022400ECA604 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0694622A49022400ECA604 /* LoginViewController.swift */; };
 		DB0694652A49022400ECA604 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0694632A49022400ECA604 /* LoginViewController.xib */; };
 		DB0694672A49094600ECA604 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0694662A49094600ECA604 /* LoginViewModel.swift */; };
+		DB06946A2A49176500ECA604 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = DB0694692A49176500ECA604 /* Toast */; };
+		DB06946D2A49177E00ECA604 /* ToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06946C2A49177E00ECA604 /* ToastManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,7 @@
 		DB0694622A49022400ECA604 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DB0694632A49022400ECA604 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		DB0694662A49094600ECA604 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		DB06946C2A49177E00ECA604 /* ToastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB06946A2A49176500ECA604 /* Toast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +107,7 @@
 			children = (
 				DB06945A2A4901CD00ECA604 /* Core */,
 				DB06945C2A4901F100ECA604 /* Scenes */,
+				DB06946B2A49176D00ECA604 /* Helpers */,
 				DB06945B2A4901DA00ECA604 /* SupportFiles */,
 				DB0694382A48FF9D00ECA604 /* Info.plist */,
 			);
@@ -186,6 +191,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		DB06946B2A49176D00ECA604 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DB06946C2A49177E00ECA604 /* ToastManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -202,6 +215,9 @@
 			dependencies = (
 			);
 			name = Recipes;
+			packageProductDependencies = (
+				DB0694692A49176500ECA604 /* Toast */,
+			);
 			productName = Recipes;
 			productReference = DB0694272A48FF9C00ECA604 /* Recipes.app */;
 			productType = "com.apple.product-type.application";
@@ -274,6 +290,9 @@
 				Base,
 			);
 			mainGroup = DB06941E2A48FF9C00ECA604;
+			packageReferences = (
+				DB0694682A49176400ECA604 /* XCRemoteSwiftPackageReference "toast-swift" */,
+			);
 			productRefGroup = DB0694282A48FF9C00ECA604 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -317,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB06946D2A49177E00ECA604 /* ToastManager.swift in Sources */,
 				DB0694672A49094600ECA604 /* LoginViewModel.swift in Sources */,
 				DB0694642A49022400ECA604 /* LoginViewController.swift in Sources */,
 				DB06942B2A48FF9C00ECA604 /* AppDelegate.swift in Sources */,
@@ -652,6 +672,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB0694682A49176400ECA604 /* XCRemoteSwiftPackageReference "toast-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BastiaanJansen/toast-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB0694692A49176500ECA604 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB0694682A49176400ECA604 /* XCRemoteSwiftPackageReference "toast-swift" */;
+			productName = Toast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB06941F2A48FF9C00ECA604 /* Project object */;
 }

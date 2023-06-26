@@ -29,10 +29,11 @@ class LoginViewController: UIViewController {
             switch result {
             case .success(let success):
                 print(success)
+                ToastManager.shared.showToast(success)
                 let vc = UIViewController()
                 present(vc, animated: true)
             case .failure(_):
-                print("Email Or Pass Ar Incorrect")
+                ToastManager.shared.showToast("Email Or Pass are Incorrect")
             }
         }
     }
