@@ -29,7 +29,7 @@ class RecioesViewCell: UITableViewCell {
         recipesImage.kf.indicatorType = .activity
         recipesImage.kf.setImage(with: url)
         recipesName.text = model.name
-        recipesCarp.text = model.carbos
+        recipesCarp.text = "Carb: \(model.carbos)"
         rateView.rating = model.rating ?? 0.0
     }
     
