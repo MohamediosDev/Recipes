@@ -16,7 +16,6 @@ class RecioesViewCell: UITableViewCell {
     @IBOutlet weak var recipesName: UILabel!
     @IBOutlet weak var recipesCarp: UILabel!
     @IBOutlet weak var rateView: CosmosView!
-    @IBOutlet weak var loveButton: UIButton!
     
     static let cellID = "RecioesViewCell"
     
@@ -33,9 +32,6 @@ class RecioesViewCell: UITableViewCell {
         recipesCarp.text = "Carb: \(model.carbos)"
         rateView.rating = model.rating ?? 0.0
         rateView.isUserInteractionEnabled = false
-    }
-    @IBAction func didTapLoveButton(_ sender: Any) {
-        print("LLOVE BUTTTON")
     }
     
 }
