@@ -31,6 +31,8 @@
 		DB06948B2A49C14400ECA604 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06948A2A49C14400ECA604 /* NetworkHandler.swift */; };
 		DB06948E2A49C1C600ECA604 /* HomeRepositery.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06948D2A49C1C600ECA604 /* HomeRepositery.swift */; };
 		DB0694902A49C85A00ECA604 /* BaseWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06948F2A49C85A00ECA604 /* BaseWireFrame.swift */; };
+		DB06949E2A4A205E00ECA604 /* RecipesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06949C2A4A205E00ECA604 /* RecipesDetailViewController.swift */; };
+		DB06949F2A4A205E00ECA604 /* RecipesDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB06949D2A4A205E00ECA604 /* RecipesDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		DB06948A2A49C14400ECA604 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
 		DB06948D2A49C1C600ECA604 /* HomeRepositery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepositery.swift; sourceTree = "<group>"; };
 		DB06948F2A49C85A00ECA604 /* BaseWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireFrame.swift; sourceTree = "<group>"; };
+		DB06949C2A4A205E00ECA604 /* RecipesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDetailViewController.swift; sourceTree = "<group>"; };
+		DB06949D2A4A205E00ECA604 /* RecipesDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipesDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,7 @@
 		DB06945C2A4901F100ECA604 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DB0694962A4A1FF300ECA604 /* ReceipeDetail */,
 				DB06946E2A49192300ECA604 /* HomeScreen */,
 				DB06945D2A4901FA00ECA604 /* LoginScreen */,
 			);
@@ -297,6 +302,55 @@
 			path = Repositery;
 			sourceTree = "<group>";
 		};
+		DB0694962A4A1FF300ECA604 /* ReceipeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DB0694992A4A200500ECA604 /* Model */,
+				DB0694982A4A200200ECA604 /* View */,
+				DB0694972A4A1FFC00ECA604 /* ViewModel */,
+			);
+			path = ReceipeDetail;
+			sourceTree = "<group>";
+		};
+		DB0694972A4A1FFC00ECA604 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DB0694982A4A200200ECA604 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB06949B2A4A201D00ECA604 /* Cell */,
+				DB06949A2A4A200C00ECA604 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB0694992A4A200500ECA604 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB06949A2A4A200C00ECA604 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DB06949C2A4A205E00ECA604 /* RecipesDetailViewController.swift */,
+				DB06949D2A4A205E00ECA604 /* RecipesDetailViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DB06949B2A4A201D00ECA604 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -414,6 +468,7 @@
 				DB06947E2A491CBA00ECA604 /* RecioesViewCell.xib in Resources */,
 				DB0694372A48FF9D00ECA604 /* LaunchScreen.storyboard in Resources */,
 				DB0694342A48FF9D00ECA604 /* Assets.xcassets in Resources */,
+				DB06949F2A4A205E00ECA604 /* RecipesDetailViewController.xib in Resources */,
 				DB0694652A49022400ECA604 /* LoginViewController.xib in Resources */,
 				DB0694772A4919B300ECA604 /* HomeViewController.xib in Resources */,
 			);
@@ -441,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB06946D2A49177E00ECA604 /* ToastManager.swift in Sources */,
+				DB06949E2A4A205E00ECA604 /* RecipesDetailViewController.swift in Sources */,
 				DB06948B2A49C14400ECA604 /* NetworkHandler.swift in Sources */,
 				DB06948E2A49C1C600ECA604 /* HomeRepositery.swift in Sources */,
 				DB0694832A49BA3700ECA604 /* RecipesModel.swift in Sources */,
