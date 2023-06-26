@@ -21,6 +21,13 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    
+    private func moveToHome() {
+        let vc = HomeViewController()
+        let nc = UINavigationController(rootViewController: vc)
+        nc.modalPresentationStyle = .fullScreen
+        present(nc, animated: true)
+    }
 
     
     @IBAction func didTapLoginButton(_ sender: Any) {
@@ -30,8 +37,8 @@ class LoginViewController: UIViewController {
             case .success(let success):
                 print(success)
                 ToastManager.shared.showToast(success)
-                let vc = UIViewController()
-                present(vc, animated: true)
+                moveToHome()
+                UserDefaults.standard.set(true, forKey: "#Sucess_Login")
             case .failure(_):
                 ToastManager.shared.showToast("Email Or Pass are Incorrect")
             }
