@@ -17,6 +17,8 @@ protocol HomeViewModelProtocol {
     var input: HomeViewModel.Input { get }
     var output: HomeViewModel.Output { get }
     func viewModelDidload()
+    func getRecipes()
+    func filterRecipes()
 }
 
 enum ViewStates {
@@ -48,15 +50,18 @@ class HomeViewModel: ObservableObject, HomeViewModelProtocol, ViewModelType {
     
     func viewModelDidload() {
         output.viewStatesPublisher.send(.showHud)
+        getRecipes()
+        filterRecipes()
+    }
+     func getRecipes() {
         homeRepositery.getRecipes { [weak self] receipes in
             guard let self = self else {return}
             output.viewStatesPublisher.send(.stopHud)
             self.output.recipes.value = receipes
         }
-        filterRecipes()
     }
    
-    private func filterRecipes() {
+    func filterRecipes() {
         Publishers.CombineLatest(input.searchPublisher.eraseToAnyPublisher(), output.recipes.eraseToAnyPublisher()).map { searchText , respices in
             if searchText.isEmpty {
                 return respices

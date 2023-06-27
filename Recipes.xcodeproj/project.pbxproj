@@ -36,6 +36,8 @@
 		DB0694A22A4AEF3300ECA604 /* RecupesDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0694A12A4AEF3300ECA604 /* RecupesDetailViewModel.swift */; };
 		DB0694A42A4AFCAF00ECA604 /* RecipeFavourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0694A32A4AFCAF00ECA604 /* RecipeFavourites.swift */; };
 		DB650CE02A4B35BD008AE70A /* LoginUniteTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB650CDF2A4B35BD008AE70A /* LoginUniteTest.swift */; };
+		DB650CE32A4B3B01008AE70A /* FakeHomeTestRepositery.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB650CE22A4B3B01008AE70A /* FakeHomeTestRepositery.swift */; };
+		DB650CE52A4B3DA0008AE70A /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB650CE42A4B3DA0008AE70A /* HomeViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		DB0694A12A4AEF3300ECA604 /* RecupesDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecupesDetailViewModel.swift; sourceTree = "<group>"; };
 		DB0694A32A4AFCAF00ECA604 /* RecipeFavourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFavourites.swift; sourceTree = "<group>"; };
 		DB650CDF2A4B35BD008AE70A /* LoginUniteTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUniteTest.swift; sourceTree = "<group>"; };
+		DB650CE22A4B3B01008AE70A /* FakeHomeTestRepositery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeHomeTestRepositery.swift; sourceTree = "<group>"; };
+		DB650CE42A4B3DA0008AE70A /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,7 @@
 		DB0694402A48FF9D00ECA604 /* RecipesTests */ = {
 			isa = PBXGroup;
 			children = (
+				DB650CE12A4B3AE5008AE70A /* HomeTest */,
 				DB0694412A48FF9D00ECA604 /* RecipesTests.swift */,
 				DB650CDF2A4B35BD008AE70A /* LoginUniteTest.swift */,
 			);
@@ -360,6 +365,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		DB650CE12A4B3AE5008AE70A /* HomeTest */ = {
+			isa = PBXGroup;
+			children = (
+				DB650CE22A4B3B01008AE70A /* FakeHomeTestRepositery.swift */,
+				DB650CE42A4B3DA0008AE70A /* HomeViewModelTest.swift */,
+			);
+			path = HomeTest;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -527,8 +541,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB650CE32A4B3B01008AE70A /* FakeHomeTestRepositery.swift in Sources */,
 				DB0694422A48FF9D00ECA604 /* RecipesTests.swift in Sources */,
 				DB650CE02A4B35BD008AE70A /* LoginUniteTest.swift in Sources */,
+				DB650CE52A4B3DA0008AE70A /* HomeViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
