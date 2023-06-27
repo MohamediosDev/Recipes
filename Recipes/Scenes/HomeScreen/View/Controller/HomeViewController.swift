@@ -70,7 +70,9 @@ extension HomeViewController: UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = RecipesDetailViewController()
+        let recipeData = viewModel.output.filterRecipes[indexPath.row]
+        let viewModel = ReceipesDetailViewModel(recipesDetail: recipeData )
+        let vc = RecipesDetailViewController(viewModel: viewModel)
         navigationController?.pushViewController(vc, animated: true)
     }
 }

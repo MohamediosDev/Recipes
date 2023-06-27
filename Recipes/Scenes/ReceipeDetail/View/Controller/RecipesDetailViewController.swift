@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RecipesDetailViewController: UIViewController {
+class RecipesDetailViewController: BaseWireFrame<ReceipesDetailViewModelProtocol>{
 
     //MARK: -> Outlet
     @IBOutlet weak var recipeImage: UIImageView!
@@ -17,10 +17,11 @@ class RecipesDetailViewController: UIViewController {
     @IBOutlet weak var protenis: UILabel!
     
     //MARK: -> Properties
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        bindRecipesDetail()
     }
     
     //MARK: -> Methods
@@ -34,5 +35,18 @@ class RecipesDetailViewController: UIViewController {
 
     @objc func didTapFavouriteButton() {
         
+    }
+    
+    private func bindRecipesDetail() {
+        viewModel.output.$recepieDetail.receive(on: DispatchQueue.main).sink { [weak self] recipeData in
+            guard let self = self else {return}
+            let url = URL(string: recipeData?.image ?? "")
+            recipeImage.kf.indicatorType = .activity
+            recipeImage.kf.setImage(with: url)
+            recipeName.text = recipeData?.name
+            recipeDiscription.text = recipeData?.description
+            caliroesLabel.text = "Calories: \(recipeData?.calories ?? "")"
+            protenis.text = "Proteins: \(recipeData?.proteins ?? "")"
+        }.store(in: &cancellable)
     }
 }
