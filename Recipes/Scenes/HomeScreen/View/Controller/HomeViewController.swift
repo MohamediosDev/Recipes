@@ -100,8 +100,6 @@ extension HomeViewController {
                 view.addSubview(progressHUD)
             case .stopHud:
                 progressHUD.hide()
-            default:
-                break
             }
         }.store(in: &cancellable)
     }

@@ -26,15 +26,25 @@ class RecipesDetailViewController: BaseWireFrame<ReceipesDetailViewModelProtocol
     
     //MARK: -> Methods
     private func setupUI() {
-        let favouriteImage = UIImageView(image: UIImage(systemName: "heart.fill"))
+        let favouriteImage = UIImageView(image: UIImage(systemName: viewModel.getFavourtiesData() ? "heart.fill" : "heart"))
         favouriteImage.tintColor = .red
         navigationItem.rightBarButtonItem?.tintColor = .red
-        self.navigationController?.navigationBar.tintColor = .red
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: favouriteImage.image, style:.plain, target: self, action: #selector(didTapFavouriteButton))
+        navigationController?.navigationBar.tintColor = .red
+        let barButton = UIBarButtonItem(image: favouriteImage.image, style:.plain, target: self, action: #selector(didTapFavouriteButton))
+        navigationItem.rightBarButtonItem = barButton
+
     }
 
-    @objc func didTapFavouriteButton() {
-        
+    @objc func didTapFavouriteButton(tapButton: UIBarButtonItem) {
+        let selectedImage = UIImage(systemName: "heart.fill")
+        let  image = UIImage(systemName: "heart")
+        if viewModel.getFavourtiesData() {
+            tapButton.image = image
+            viewModel.addRecipesToFavourtie(isFavourite: false)
+        } else {
+            viewModel.addRecipesToFavourtie(isFavourite: true)
+            tapButton.image = selectedImage
+        }
     }
     
     private func bindRecipesDetail() {
