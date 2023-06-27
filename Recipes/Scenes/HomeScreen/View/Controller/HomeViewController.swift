@@ -11,7 +11,7 @@ class HomeViewController: BaseWireFrame<HomeViewModelProtocol> {
 
     //MARK: -> Outlet
     @IBOutlet weak var recipesTableView: UITableView!
-    
+    private let textLabel = UILabel()
     //MARK: -> Properties
     private let searchController = UISearchController()
     private let progressHUD = ProgressHUD(text: "Loading...")
@@ -35,7 +35,7 @@ class HomeViewController: BaseWireFrame<HomeViewModelProtocol> {
         viewModel.output.$filterRecipes.receive(on: DispatchQueue.main).sink { [weak self] value in
             guard let self = self else {return}
             if value.isEmpty {
-                let textLabel = UILabel()
+                
                 textLabel.text = "No Data To Show"
                 textLabel.textAlignment = .center
                 recipesTableView.backgroundView = textLabel
@@ -98,8 +98,10 @@ extension HomeViewController {
             switch states {
             case .showHud:
                 view.addSubview(progressHUD)
+                textLabel.isHidden = true
             case .stopHud:
                 progressHUD.hide()
+                textLabel.isHidden = !true
             }
         }.store(in: &cancellable)
     }
