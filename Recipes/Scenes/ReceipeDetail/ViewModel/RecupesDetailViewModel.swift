@@ -24,6 +24,7 @@ class ReceipesDetailViewModel : ObservableObject , ReceipesDetailViewModelProtoc
         @Published var recepieDetail: RecipesModelElement?
     }
     
+    private let realmManager: DataBaseManagerProtocol = DataBaseManager()
     let input: Input = .init()
     let output: Output = .init()
       
@@ -32,12 +33,21 @@ class ReceipesDetailViewModel : ObservableObject , ReceipesDetailViewModelProtoc
     }
     
     func addRecipesToFavourtie(isFavourite: Bool) {
-        UserDefaults.standard.set(isFavourite, forKey: output.recepieDetail?.id ?? "NOID")
-        UserDefaults.standard.synchronize()
+        guard let recipes = output.recepieDetail else {return}
+        if let saveRecipe = realmManager.getFavourtie(recipes.id) {
+            realmManager.deletFavourite(recipe: saveRecipe)
+            let newRecipe = recipes.toDataBase(isFavourite: isFavourite)
+            realmManager.saveFavouriteState(recipe: newRecipe)
+        } else {
+            realmManager.saveFavouriteState(recipe: recipes.toDataBase(isFavourite: isFavourite))
+        }
     }
     
     func getFavourtiesData() -> Bool {
-        return UserDefaults.standard.value(forKey: output.recepieDetail?.id ?? "NOID") as? Bool ?? false
+        guard let recipes = output.recepieDetail else {return false}
+        guard let saveRecipe = realmManager.getFavourtie(recipes.id) else { return false}
+        
+        return saveRecipe.isFavourite
     }
 
 }

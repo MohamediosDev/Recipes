@@ -30,4 +30,13 @@ struct RecipesModelElement: Codable {
     }
 }
 
+extension RecipesModelElement {
+    func toDataBase(isFavourite: Bool) -> RecipesDataBaseModel {
+        let dataBaseModel = RecipesDataBaseModel()
+        dataBaseModel.id = self.id
+        dataBaseModel.isFavourite = isFavourite
+        return dataBaseModel
+    }
+}
+
 

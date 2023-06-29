@@ -10,7 +10,6 @@ import XCTest
 
 final class LoginUniteTest: XCTestCase {
 
-    var loginViewModel: LoginViewModel!
     private let saveEmail = UserDefaults.standard.string(forKey: "#EMAIL")
     private let savepass = UserDefaults.standard.string(forKey: "#PASS")
     
