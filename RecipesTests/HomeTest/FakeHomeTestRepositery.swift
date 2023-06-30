@@ -28,9 +28,6 @@ class FakeHomeRepositery: HomeRepsiteryProtocol {
 
         }
     }
-//    func getRecipes(complation: @escaping ([RecipesModelElement]) -> Void) {
-//
-//    }
 }
 
 
