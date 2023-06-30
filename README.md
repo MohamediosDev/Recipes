@@ -23,6 +23,7 @@ To Login Into Recipes App Just Type.
 * Model has any necessary data.
 * View is responsible for displaying the List Of Data to the user.
 * View Model Is carry All business Logic.
+* Using Combine Frame work For Data Binding
   
 
 # Structure 
