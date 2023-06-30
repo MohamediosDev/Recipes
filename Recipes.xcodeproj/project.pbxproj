@@ -38,12 +38,17 @@
 		DB650CE02A4B35BD008AE70A /* LoginUniteTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB650CDF2A4B35BD008AE70A /* LoginUniteTest.swift */; };
 		DB650CE32A4B3B01008AE70A /* FakeHomeTestRepositery.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB650CE22A4B3B01008AE70A /* FakeHomeTestRepositery.swift */; };
 		DB650CE52A4B3DA0008AE70A /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB650CE42A4B3DA0008AE70A /* HomeViewModelTest.swift */; };
+		DB7AB31A2A4F278E0023A288 /* HomeNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7AB3192A4F278E0023A288 /* HomeNetwork.swift */; };
+		DB7AB31E2A4F38160023A288 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7AB31B2A4F38160023A288 /* APIConfiguration.swift */; };
+		DB7AB31F2A4F38160023A288 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7AB31C2A4F38160023A288 /* NetworkConstant.swift */; };
+		DB7AB3202A4F38160023A288 /* NetworkCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7AB31D2A4F38160023A288 /* NetworkCaller.swift */; };
 		DBBC48602A4E2A0600FFEB33 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DBBC485F2A4E2A0600FFEB33 /* Realm */; };
 		DBBC48622A4E2A0600FFEB33 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DBBC48612A4E2A0600FFEB33 /* RealmSwift */; };
 		DBBC48652A4E2A4A00FFEB33 /* RecipesDataBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBC48642A4E2A4900FFEB33 /* RecipesDataBaseModel.swift */; };
 		DBBC48692A4E2BF800FFEB33 /* RealmDataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBC48682A4E2BF800FFEB33 /* RealmDataBaseManager.swift */; };
 		DBBC486C2A4E399E00FFEB33 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DBBC486B2A4E399E00FFEB33 /* Realm */; };
 		DBBC486E2A4E399E00FFEB33 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DBBC486D2A4E399E00FFEB33 /* RealmSwift */; };
+		DBBC48702A4F24D700FFEB33 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBC486F2A4F24D700FFEB33 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,8 +101,13 @@
 		DB650CDF2A4B35BD008AE70A /* LoginUniteTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUniteTest.swift; sourceTree = "<group>"; };
 		DB650CE22A4B3B01008AE70A /* FakeHomeTestRepositery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeHomeTestRepositery.swift; sourceTree = "<group>"; };
 		DB650CE42A4B3DA0008AE70A /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
+		DB7AB3192A4F278E0023A288 /* HomeNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetwork.swift; sourceTree = "<group>"; };
+		DB7AB31B2A4F38160023A288 /* APIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
+		DB7AB31C2A4F38160023A288 /* NetworkConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
+		DB7AB31D2A4F38160023A288 /* NetworkCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkCaller.swift; sourceTree = "<group>"; };
 		DBBC48642A4E2A4900FFEB33 /* RecipesDataBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDataBaseModel.swift; sourceTree = "<group>"; };
 		DBBC48682A4E2BF800FFEB33 /* RealmDataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataBaseManager.swift; sourceTree = "<group>"; };
+		DBBC486F2A4F24D700FFEB33 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +264,7 @@
 				DB06946C2A49177E00ECA604 /* ToastManager.swift */,
 				DB0694782A491A8E00ECA604 /* ProgressHUD.swift */,
 				DB06948F2A49C85A00ECA604 /* BaseWireFrame.swift */,
+				DBBC486F2A4F24D700FFEB33 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -261,6 +272,7 @@
 		DB06946E2A49192300ECA604 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				DB06948C2A49C1B500ECA604 /* Repositery */,
 				DB0694712A49193400ECA604 /* Model */,
 				DB0694702A49193100ECA604 /* View */,
 				DB06946F2A49192B00ECA604 /* ViewModel */,
@@ -314,7 +326,8 @@
 		DB0694892A49C0BE00ECA604 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				DB06948C2A49C1B500ECA604 /* Repositery */,
+				DB7AB3182A4F27250023A288 /* HomeNetwork */,
+				DBBC48712A4F26DE00FFEB33 /* Base */,
 				DB06948A2A49C14400ECA604 /* NetworkHandler.swift */,
 			);
 			path = NetworkLayer;
@@ -389,6 +402,14 @@
 			path = HomeTest;
 			sourceTree = "<group>";
 		};
+		DB7AB3182A4F27250023A288 /* HomeNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				DB7AB3192A4F278E0023A288 /* HomeNetwork.swift */,
+			);
+			path = HomeNetwork;
+			sourceTree = "<group>";
+		};
 		DBBC48632A4E2A2900FFEB33 /* DataBaseModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,6 +432,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBBC48712A4F26DE00FFEB33 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DB7AB31B2A4F38160023A288 /* APIConfiguration.swift */,
+				DB7AB31D2A4F38160023A288 /* NetworkCaller.swift */,
+				DB7AB31C2A4F38160023A288 /* NetworkConstant.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -565,6 +596,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBBC48652A4E2A4A00FFEB33 /* RecipesDataBaseModel.swift in Sources */,
+				DBBC48702A4F24D700FFEB33 /* Constants.swift in Sources */,
 				DB06946D2A49177E00ECA604 /* ToastManager.swift in Sources */,
 				DBBC48692A4E2BF800FFEB33 /* RealmDataBaseManager.swift in Sources */,
 				DB0694A42A4AFCAF00ECA604 /* RecipeFavourites.swift in Sources */,
@@ -581,6 +613,10 @@
 				DB06947D2A491CBA00ECA604 /* RecioesViewCell.swift in Sources */,
 				DB06942D2A48FF9C00ECA604 /* SceneDelegate.swift in Sources */,
 				DB0694762A4919B300ECA604 /* HomeViewController.swift in Sources */,
+				DB7AB3202A4F38160023A288 /* NetworkCaller.swift in Sources */,
+				DB7AB31F2A4F38160023A288 /* NetworkConstant.swift in Sources */,
+				DB7AB31A2A4F278E0023A288 /* HomeNetwork.swift in Sources */,
+				DB7AB31E2A4F38160023A288 /* APIConfiguration.swift in Sources */,
 				DB0694A22A4AEF3300ECA604 /* RecupesDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

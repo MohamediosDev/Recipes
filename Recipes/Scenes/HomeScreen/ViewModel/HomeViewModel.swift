@@ -57,7 +57,12 @@ class HomeViewModel: ObservableObject, HomeViewModelProtocol, ViewModelType {
         homeRepositery.getRecipes { [weak self] receipes in
             guard let self = self else {return}
             output.viewStatesPublisher.send(.stopHud)
-            self.output.recipes.value = receipes
+            switch receipes {
+            case .success(let recipesData):
+                self.output.recipes.value = recipesData
+            case .failure(let failure):
+                print("Error",failure)
+            }
         }
     }
    
