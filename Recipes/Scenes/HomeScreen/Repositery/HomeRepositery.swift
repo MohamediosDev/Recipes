@@ -12,12 +12,6 @@ protocol HomeRepsiteryProtocol {
 
 class HomeRepositery: HomeRepsiteryProtocol {
    
-    private let network: NetworkHandler
-    
-    init(network: NetworkHandler) {
-        self.network = network
-    }
-    
     func getRecipes(complation: @escaping (Result<[RecipesModelElement], Error>) -> Void) {
         Network.Request(request: HomeAPIRouter.getRecipes.urlRequest, completion: complation)
     }

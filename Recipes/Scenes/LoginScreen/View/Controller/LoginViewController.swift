@@ -23,8 +23,7 @@ class LoginViewController: UIViewController {
     }
     
     private func moveToHome() {
-        let network = NetworkHandler()
-        let repositery: HomeRepsiteryProtocol = HomeRepositery(network: network)
+        let repositery: HomeRepsiteryProtocol = HomeRepositery()
         let vc = HomeViewController(viewModel: HomeViewModel(homeRepositery: repositery))
         let nc = UINavigationController(rootViewController: vc)
         nc.modalPresentationStyle = .fullScreen

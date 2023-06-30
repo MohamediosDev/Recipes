@@ -17,8 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         if UserDefaults.standard.bool(forKey: "#Sucess_Login") {
-            let network = NetworkHandler()
-            let repositery: HomeRepsiteryProtocol = HomeRepositery(network: network)
+            let repositery: HomeRepsiteryProtocol = HomeRepositery()
             window.rootViewController = UINavigationController(rootViewController: HomeViewController(viewModel: HomeViewModel(homeRepositery: repositery)))
         } else {
             window.rootViewController = LoginViewController()

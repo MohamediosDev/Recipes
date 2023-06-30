@@ -28,7 +28,6 @@
 		DB0694832A49BA3700ECA604 /* RecipesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0694822A49BA3700ECA604 /* RecipesModel.swift */; };
 		DB0694852A49BB1200ECA604 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0694842A49BB1200ECA604 /* HomeViewModel.swift */; };
 		DB0694882A49BE4300ECA604 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DB0694872A49BE4300ECA604 /* Kingfisher */; };
-		DB06948B2A49C14400ECA604 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06948A2A49C14400ECA604 /* NetworkHandler.swift */; };
 		DB06948E2A49C1C600ECA604 /* HomeRepositery.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06948D2A49C1C600ECA604 /* HomeRepositery.swift */; };
 		DB0694902A49C85A00ECA604 /* BaseWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06948F2A49C85A00ECA604 /* BaseWireFrame.swift */; };
 		DB06949E2A4A205E00ECA604 /* RecipesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06949C2A4A205E00ECA604 /* RecipesDetailViewController.swift */; };
@@ -91,7 +90,6 @@
 		DB06947C2A491CBA00ECA604 /* RecioesViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecioesViewCell.xib; sourceTree = "<group>"; };
 		DB0694822A49BA3700ECA604 /* RecipesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesModel.swift; sourceTree = "<group>"; };
 		DB0694842A49BB1200ECA604 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		DB06948A2A49C14400ECA604 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
 		DB06948D2A49C1C600ECA604 /* HomeRepositery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepositery.swift; sourceTree = "<group>"; };
 		DB06948F2A49C85A00ECA604 /* BaseWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireFrame.swift; sourceTree = "<group>"; };
 		DB06949C2A4A205E00ECA604 /* RecipesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDetailViewController.swift; sourceTree = "<group>"; };
@@ -328,7 +326,6 @@
 			children = (
 				DB7AB3182A4F27250023A288 /* HomeNetwork */,
 				DBBC48712A4F26DE00FFEB33 /* Base */,
-				DB06948A2A49C14400ECA604 /* NetworkHandler.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -601,7 +598,6 @@
 				DBBC48692A4E2BF800FFEB33 /* RealmDataBaseManager.swift in Sources */,
 				DB0694A42A4AFCAF00ECA604 /* RecipeFavourites.swift in Sources */,
 				DB06949E2A4A205E00ECA604 /* RecipesDetailViewController.swift in Sources */,
-				DB06948B2A49C14400ECA604 /* NetworkHandler.swift in Sources */,
 				DB06948E2A49C1C600ECA604 /* HomeRepositery.swift in Sources */,
 				DB0694832A49BA3700ECA604 /* RecipesModel.swift in Sources */,
 				DB0694902A49C85A00ECA604 /* BaseWireFrame.swift in Sources */,
