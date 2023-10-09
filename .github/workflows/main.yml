@@ -1,39 +1,16 @@
-name: pull_request
-
-on:
-  push:
-    branches: ["main"]
-
 jobs:
-  SwiftLint:
-    runs-on: ubuntu-latest
+  unit_tests:
+    runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: GitHub Action for SwiftLint
-        uses: norio-nomura/action-swiftlint@3.2.1
-
-  Build:
-    runs-on: macos-12
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Install Dependencies
-      run: |
-        cd GitHubActions
-        pod install --repo-update
-      shell: bash
-
-    - name: Xcode Setup
-      uses: maxim-lobanov/setup-xcode@v1
-      with:
-        xcode-version: '14.1'
-
-    - name: Run tests
-      run: |
-        cd GitHubActions
-        xcodebuild test -workspace GitHubActions.xcworkspace -scheme GitHubActions clean build -sdk iphoneos -destination "platform=iOS Simulator,OS=16.1,name=iPhone 14 Pro Max" CODE_SIGNING_ALLOWED=No
-        
-   - name: Upload coverage reports to Codecov
-     uses: codecov/codecov-action@v3
-      env:
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    - name: Repository checkout
+      uses: actions/checkout@v2
+    - name: Lint
+      run: swiftlint
+    - name: Build for macOS
+      run: swift build -v
+    - name: Run macOS tests
+      run: swift test -v
+    - name: Build for iOS
+      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild build-for-testing -scheme IndexedDataStore -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty
+    - name: Run iOS tests
+      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild test-without-building -scheme IndexedDataStore -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty
