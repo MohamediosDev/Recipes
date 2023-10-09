@@ -23,7 +23,7 @@ final class HomeViewModelTest: XCTestCase {
     func testGetAllRecipesData_WithValidData_ShouldReturnData() {
         let expection = XCTestExpectation(description: "Get All Recipes Data")
         var recipesData: [RecipesModelElement] = []
-        print("Hello Test Uniteeddeeee")
+        print("Hello Test Uniteeddeeeeeeeee")
         viewModel.output.recipes.sink { recipes in
             recipesData = recipes
             expection.fulfill()
