@@ -1,39 +1,21 @@
-name: pull_request
+name: API workflow
 
-on:
-  pull_request:
-    branches: ["main"]
+on: [push, pull_request]
 
 jobs:
-  SwiftLint:
+  build:
     runs-on: ubuntu-latest
+    name: Test python API
     steps:
-      - uses: actions/checkout@v3
-      - name: GitHub Action for SwiftLint
-        uses: norio-nomura/action-swiftlint@3.2.1
-
-  Build:
-    runs-on: macos-12
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Install Dependencies
+    - uses: actions/checkout@v1
+    - name: Install requirements
+      run: pip install -r requirements.txt
+    - name: Run tests and collect coverage
+      run: pytest --cov .
+    - name: Upload coverage reports to Codecov
       run: |
-        cd GitHubActions
-        pod install --repo-update
-      shell: bash
-
-    - name: Xcode Setup
-      uses: maxim-lobanov/setup-xcode@v1
-      with:
-        xcode-version: '14.1'
-
-    - name: Build
-      run: |
-        cd GitHubActions
-        xcodebuild build -workspace GitHubActions.xcworkspace -scheme GitHubActions clean build -sdk iphoneos CODE_SIGNING_ALLOWED=No
-
-    - name: Run tests
-      run: |
-        cd GitHubActions
-        xcodebuild test -workspace GitHubActions.xcworkspace -scheme GitHubActions clean build -sdk iphoneos -destination "platform=iOS Simulator,OS=16.1,name=iPhone 14 Pro Max" CODE_SIGNING_ALLOWED=No
+        # Replace `linux` below with the appropriate OS
+        # Options are `alpine`, `linux`, `macos`, `windows`
+        curl -Os https://uploader.codecov.io/latest/linux/codecov
+        chmod +x codecov
+        ./codecov -t ${CODECOV_TOKEN}
