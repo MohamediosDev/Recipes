@@ -1,26 +1,39 @@
-#name of your config
-name: Swift
+name: pull_request
 
-#when to trigger the jobs
-on: 
-  push:
-    branches: [ main ] #trigger on each push to master
+on:
   pull_request:
-    branches: [ main ] #trigger on each PR for master
+    branches: ["main"]
 
-#list of jobs to perform
 jobs:
-  #the only job in the list, named `build`
-  build: 
-    #specify OS to run the jobs on
-    runs-on: macos-latest 
-    #sequential steps to run for the `build` job
-    steps: 
-      # step 1, use Marketplace action called Checkout@v2, to checkout the code
-    - uses: actions/checkout@v2 #'uses' keyword launches the Marketplace action
-      # step 2, verbosely build the package using the `swift` CLI
+  SwiftLint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: GitHub Action for SwiftLint
+        uses: norio-nomura/action-swiftlint@3.2.1
+
+  Build:
+    runs-on: macos-12
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install Dependencies
+      run: |
+        cd GitHubActions
+        pod install --repo-update
+      shell: bash
+
+    - name: Xcode Setup
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: '14.1'
+
     - name: Build
-      run: swift build -v #'run' keyword executes the command, as if it's run in terminal
-      # step 3, verbosely test the package using the `swift` CLI
+      run: |
+        cd GitHubActions
+        xcodebuild build -workspace GitHubActions.xcworkspace -scheme GitHubActions clean build -sdk iphoneos CODE_SIGNING_ALLOWED=No
+
     - name: Run tests
-      run: swift test -v #'run' keyword executes the command, as if it's run in terminal
+      run: |
+        cd GitHubActions
+        xcodebuild test -workspace GitHubActions.xcworkspace -scheme GitHubActions clean build -sdk iphoneos -destination "platform=iOS Simulator,OS=16.1,name=iPhone 14 Pro Max" CODE_SIGNING_ALLOWED=No
