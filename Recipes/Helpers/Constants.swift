@@ -12,4 +12,5 @@ struct Constants {
     static let userPassword = "12345678"
     static let emailKey = "#EMAIL"
     static let passKey = "#PASS"
+    static let loginKey = "#Sucess_Login"
 }
